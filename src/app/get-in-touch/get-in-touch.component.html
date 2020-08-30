@@ -1,0 +1,54 @@
+<div id="get-in-touch">
+    <div class="container">
+        <div class="get-in-touch-container row">
+            <div class="get-in-touch col-12 col-lg-6">
+                <div class="get-in-touch-header">Get In Touch</div>
+                <p class="get-in-touch-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+
+                <div class="get-in-touch-info d-none d-lg-flex flex-column">
+                    <div class="d-flex">
+                        <mat-icon color="primary" class="mr-4">location_on</mat-icon><span class="address">15. Delta
+                            Drive US</span>
+                    </div>
+                    <div class="d-flex">
+                        <mat-icon color="primary" class="mr-4">smartphone</mat-icon><span
+                            class="phone-number">123-345-567-789-0</span>
+                    </div>
+                </div>
+            </div>
+            <form [formGroup]="getInTouchForm" (ngSubmit)=onSubmit()
+                class="get-in-touch-form col-12 col-lg-6 d-flex flex-column">
+                <div class="row">
+                    <mat-form-field class="col-12 col-lg-6">
+                        <mat-label>Name</mat-label>
+                        <input type="text" matInput formControlName="name" autocomplete="off" >
+                        <mat-error *ngIf="name.invalid">Enter a name</mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="col-12 col-lg-6">
+                        <mat-label>Email</mat-label>
+                        <input type="email" matInput formControlName="email" autocomplete="off" >
+                        <mat-error *ngIf="email.invalid">Enter a valid email</mat-error>
+                    </mat-form-field>
+                </div>
+                <mat-form-field>
+                    <mat-label>Message</mat-label>
+                    <textarea matInput formControlName="message"></textarea>
+                    <mat-error *ngIf="message.invalid">Please write a message</mat-error>
+                </mat-form-field>
+                <button mat-raised-button class="get-in-touch-btn" type="submit" color="primary"
+                    [disabled]="getInTouchForm.invalid">Send</button>
+
+                <div class="get-in-touch-info d-flex d-lg-none flex-column">
+                    <div class="d-flex">
+                        <mat-icon color="primary" class="mr-4">location_on</mat-icon><span class="address">15. Delta
+                            Drive US</span>
+                    </div>
+                    <div class="d-flex">
+                        <mat-icon color="primary" class="mr-4">smartphone</mat-icon><span
+                            class="phone-number">123-345-567-789-0</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

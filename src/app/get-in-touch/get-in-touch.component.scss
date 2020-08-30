@@ -1,0 +1,162 @@
+#get-in-touch {
+  background: #282e2e;
+
+  .get-in-touch-container {
+    padding-top: 102px;
+  }
+
+  .get-in-touch {
+    position: relative;
+    z-index: 2;
+    width: 82%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      height: 29.66px;
+      width: 87.21px;
+      background: #2bd37f;
+    }
+  }
+
+  .get-in-touch-header {
+    margin-left: 18.24px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 33px;
+    line-height: 49px;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+
+  .get-in-touch-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    color: #e5e5e5;
+  }
+
+  .get-in-touch-btn {
+    color: #ffffff !important;
+    padding: 7px 7.47px;
+    margin-top: 20px;
+    border-radius: 0;
+    width: 50%;
+  }
+
+  input,
+  textarea {
+    // font-style: normal;
+    // font-weight: normal;
+    // font-size: 9px !important;
+    // line-height: 13px !important;
+    background: #282e2e !important;
+  }
+
+  .get-in-touch-info {
+    margin-top: 74.53px;
+    margin-bottom: 92px;
+  }
+
+  .address {
+    margin-bottom: 15px;
+  }
+
+  .address,
+  .phone-number {
+    font-style: normal;
+    font-weight: normal;
+    // font-size: 10px;
+    // line-height: 28px;
+    color: #ffffff;
+  }
+
+  ::ng-deep .mat-input-element {
+    color: #ffffff;
+  }
+
+  ::ng-deep .mat-form-field-label {
+    color: #ffffff;
+  }
+
+  ::ng-deep .mat-form-field-underline {
+    background-color: #ffffff;
+  }
+
+  ::ng-deep .mat-focused .mat-form-field-label {
+    color: #2bd37f;
+  }
+
+  ::ng-deep .ng-valid .mat-form-field-label {
+    color: #2bd37f;
+  }
+
+  ::ng-deep .ng-valid .mat-form-field-underline {
+    background-color: #2bd37f;
+  }
+
+  ::ng-deep .mat-focused.ng-touched.ng-invalid .mat-form-field-label,
+  ::ng-deep .mat-focused.ng-dirty.ng-invalid .mat-form-field-label {
+    color: #f44336;
+  }
+
+  //   ::ng-deep .ng-untouched .mat-form-field-label {
+  //     color: #ffffff;
+  //   }
+
+  //   ::ng-deep .ng-untouched .mat-form-field-label {
+  //     color: #ffffff;
+  //   }
+
+  //   ::ng-deep.ng-untouched .mat-form-field-underline {
+  //     background-color: #ffffff;
+  //   }
+
+  //   ::ng-deep .mat-focused.ng-dirty.ng-invalid .mat-form-field-label {
+  //     color: #f44336;
+  //   }
+
+  //   ::ng-deep .ng-invalid .ng-touched .mat-form-field-label {
+  //     color: #f44336;
+  //   }
+}
+
+@media screen and (max-width: 768px) {
+  #get-in-touch {
+    .container {
+      width: 65%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #get-in-touch {
+    .get-in-touch {
+      &::before {
+        height: 50px;
+        width: 127.89px;
+      }
+    }
+
+    .get-in-touch-form {
+      padding-top: 49px;
+    }
+
+    .get-in-touch-container {
+      padding-bottom: 92px;
+    }
+
+    .get-in-touch-header {
+      font-size: 60px;
+      line-height: 90px;
+    }
+
+    .get-in-touch-text {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+}
