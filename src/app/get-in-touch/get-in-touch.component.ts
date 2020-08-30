@@ -20,7 +20,8 @@ export class GetInTouchComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit() {
-    console.log(this.getInTouchForm.value);
+    // console.log(this.getInTouchForm.value);
+    // this.getInTouchForm.reset();
   }
 
   get name() {

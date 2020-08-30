@@ -6,6 +6,7 @@
 #landing-page {
   height: 100vh;
   background: linear-gradient(90deg, #ffffff 70%, #2bd37f 30%);
+  transition: all 0.3s ease-in-out;
 
   .landing-page {
     position: relative;

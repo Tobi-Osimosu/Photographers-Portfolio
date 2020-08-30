@@ -47,6 +47,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     SwiperModule,
   ],
   providers: [
+    { provide: 'windowObject', useValue: window },
     // {
     //   provide: SWIPER_CONFIG,
     //   useValue: DEFAULT_SWIPER_CONFIG,

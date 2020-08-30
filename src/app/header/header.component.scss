@@ -1,5 +1,7 @@
 nav {
-  margin-top: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: all 0.3s ease-in-out;
 }
 
 .bg-transparent {
@@ -12,6 +14,7 @@ nav {
   font-size: 35px;
   line-height: 37px;
   color: #282e2e;
+  transition: all 0.3s ease-in-out;
 }
 
 .navbar-toggler {
@@ -64,5 +67,17 @@ nav {
 @media screen and (min-width: 768px) {
   .navbar-brand {
     font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    background: linear-gradient(90deg, #2bd37f 70%, #282e2e 30%);
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+      0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+
+    .navbar-brand {
+      color: #ffffff;
+    }
   }
 }

@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Inject } from '@angular/core';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-clients-reviews',
@@ -17,15 +18,15 @@ export class ClientsReviewsComponent implements OnInit {
   ];
 
   config: SwiperConfigInterface = {
-    pagination: { el: '.swiper-pagination', clickable: true },
+    // pagination: { el: '.swiper-pagination', clickable: true },
     direction: 'horizontal',
     loop: true,
     slidesPerView: 1,
     keyboard: true,
-    mousewheel: true,
+    // mousewheel: true,
     navigation: true,
     autoplay: {
-      delay: 5000,
+      delay: 3000,
     },
     followFinger: true,
     effect: 'coverflow',
@@ -33,7 +34,21 @@ export class ClientsReviewsComponent implements OnInit {
 
   // @ViewChild(SwiperDirective, { static: false }) directiveRef?: SwiperDirective;
 
-  constructor() {}
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    @Inject('windowObject') private window: Window
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    this.manageSwiperControls();
+  }
+
+  manageSwiperControls() {
+    if (matchMedia('(min-width: 768px)').matches) {
+      this.document.querySelector('.slider-controls').remove();
+    } else if (matchMedia('(max-width: 767px)').matches) {
+      this.document.querySelector('.slider-controls-md').remove();
+    }
+    // console.log('done');
+  }
 }
