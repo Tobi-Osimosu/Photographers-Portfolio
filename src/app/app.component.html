@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<app-header></app-header>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photographer Porfolio</title>
-</head>
-
-<body (window:scroll)="onScroll()">
-    <app-header></app-header>
+<main (window:scroll)="onScroll()">
     <app-landing-page></app-landing-page>
     <app-about></app-about>
     <app-gallery></app-gallery>
     <app-clients-reviews></app-clients-reviews>
     <app-get-in-touch></app-get-in-touch>
-    <app-footer></app-footer>
-</body>
+</main>
 
-</html>
+<app-footer></app-footer>
