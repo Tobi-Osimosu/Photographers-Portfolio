@@ -41,7 +41,7 @@ export class ClientsReviewsComponent implements OnInit {
 
   ngOnInit() {
     this.window.addEventListener('resize', () => {
-      this.window.location.reload();
+      // this.window.location.reload();
       this.manageSwiperControls();
     });
   }
