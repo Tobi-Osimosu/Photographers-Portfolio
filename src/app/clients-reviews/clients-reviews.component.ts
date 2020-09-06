@@ -40,7 +40,10 @@ export class ClientsReviewsComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.manageSwiperControls();
+    this.window.addEventListener('resize', () => {
+      this.window.location.reload();
+      this.manageSwiperControls();
+    });
   }
 
   manageSwiperControls() {
@@ -49,6 +52,5 @@ export class ClientsReviewsComponent implements OnInit {
     } else if (matchMedia('(max-width: 767px)').matches) {
       this.document.querySelector('.slider-controls-md').remove();
     }
-    // console.log('done');
   }
 }

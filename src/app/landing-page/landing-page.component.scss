@@ -80,8 +80,10 @@
 
   .play-video-container {
     position: absolute;
-    left: 30px;
-    bottom: 142px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 41px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -165,7 +167,7 @@
       right: 0;
       bottom: 0;
       margin-bottom: 41px;
-  
+
       .play-video-text {
         font-size: 27px;
       }
